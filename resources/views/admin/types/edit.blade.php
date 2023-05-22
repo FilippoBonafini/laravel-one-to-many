@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <form action="{{ route('admin.projects.update', $project->id) }}" method="POST" class="container" id="save-form"
+    <form action="{{ route('admin.types.update', $type->id) }}" method="POST" class="container" id="save-form"
         enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -18,8 +18,8 @@
                 @endif
                 <div class="card">
                     <div class="card-header d-flex gap-3 align-items-center justify-content-between">
-                        <input type="text" class="form-control" id="title" name="title"
-                            value="{{ old('title', $project->title) }}">
+                        <input type="text" class="form-control" id="name" name="name"
+                            value="{{ $type->name }}">
 
 
                         <a class="btn btn-success btn-sm"
@@ -31,28 +31,7 @@
 
                     </div>
                     <div class="card-body">
-                        <h5>Description:</h5>
-                        <p>
-                            <textarea style="resize: none;" rows="5" class="form-control" id="description" name="description">{{ trim(old('description', $project->description)) }}</textarea>
-                        </p>
-                        <h5>Project link:</h5>
-                        <input type="text" class="form-control" id="link" name="link"
-                            value="{{ old('link', $project->link) }}">
-
-                        <div class="form-check form-switch pt-4">
-                            <input type="checkbox" name="set_image" value="1" class="form-check-input" role="switch"
-                                id="set_image" @if ($project->image) checked @endif>
-                            <label for="set_image" class="form-check-label">Immagine</label>
-                        </div>
-                        <div id="image_input_container">
-                            <h5 class="mt-3">Immagine:</h5>
-                            <input type="file" class="form-control" id="image" name="image">
-                            <div class="preview pt-3">
-                                <img class="d-block" id="file-image-preview"
-                                    @if ($project->image) src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}" @endif>
-                            </div>
-                        </div>
-
+                        <h5>Ancora nessuna informazione aggiuntiva</h5>
                     </div>
 
                 </div>

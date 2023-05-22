@@ -6,28 +6,12 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header h4 d-flex align-items-center justify-content-between">
-                        <div>{{ $project->id }}. {{ $project->title }}</div>
-                        @include ('admin.projects.partials.editZone')
+                        <div>{{ $type->id }}</div>
+                        @include ('admin.types.partials.editZone')
                     </div>
                     <div class="card-body">
-                        <h5>Description:</h5>
-                        <p>{{ $project->description }}</p>
-
-                        <h5>Project link:</h5>
-                        <a href="#">{{ $project->link }}</a>
-
-                        @if ($project->image)
-                            <div class="preview">
-                                <img id="file-image-preview" class="pt-3 d-block"
-                                    src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
-                            </div>
-                        @endif
-
-
-                        {{-- @if ($element->prova_id)
-                            {{$element->tableB->name}}
-                        @endif --}}
-
+                        <h5>Title:</h5>
+                        <p>{{ $type->title }}</p>
                     </div>
                 </div>
             </div>
