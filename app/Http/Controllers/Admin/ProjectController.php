@@ -112,7 +112,7 @@ class ProjectController extends Controller
 
 
         $project->update($data);
-        return redirect()->route('admin.projects.index', $project->id);
+        return redirect()->route('admin.projects.index', $project->id)->with('message', 'Progetto ' . $project->id . ' modificato con successo');
     }
 
     /**
@@ -128,6 +128,6 @@ class ProjectController extends Controller
         }
 
         $project->delete();
-        return redirect()->route('admin.projects.index');
+        return redirect()->route('admin.projects.index')->with('message', 'Progetto ' . $project->id . ' eliminato con successo');
     }
 }
