@@ -44,6 +44,19 @@
                                 id="set_image" @if ($project->image) checked @endif>
                             <label for="set_image" class="form-check-label">Immagine</label>
                         </div>
+
+                        <h5 class="pt-3">Type of project:</h5>
+
+                        <select name="type_id" class="form-select">
+                            <option value="" selected>Select:</option>
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}"
+                                    {{ old('type_id') == $type->id || $project->type_id == $type->id ? 'selected' : '' }}>
+                                    {{ $type->name }}
+                                </option>
+                            @endforeach
+                        </select>
+
                         <div id="image_input_container">
                             <h5 class="mt-3">Immagine:</h5>
                             <input type="file" class="form-control" id="image" name="image">

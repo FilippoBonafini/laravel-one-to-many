@@ -38,7 +38,7 @@
                         <input type="text" class="form-control" id="link" name="link"
                             value="{{ old('link') }}">
 
-                        <h5 class="pt-3">Select</h5>
+                        <h5 class="pt-3">Type of project:</h5>
 
                         <select name="type_id" class="form-select">
                             <option value="" selected>Select:</option>

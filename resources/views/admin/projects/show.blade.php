@@ -13,6 +13,8 @@
                         <h5>Description:</h5>
                         <p>{{ $project->description }}</p>
 
+
+
                         <h5>Project link:</h5>
                         <a href="#">{{ $project->link }}</a>
 
@@ -24,9 +26,8 @@
                         @endif
 
 
-                        {{-- @if ($element->prova_id)
-                            {{$element->tableB->name}}
-                        @endif --}}
+                        <h5 class="pt-3">Type of project:</h5>
+                        <p>{{ $project->type?->name ?: 'Nessuna categoria' }}</p>
 
                     </div>
                 </div>
