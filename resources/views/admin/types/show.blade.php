@@ -6,12 +6,12 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header h4 d-flex align-items-center justify-content-between">
-                        <div>{{ $type->id }}</div>
+                        <div>ID: {{ $type->id }}</div>
                         @include ('admin.types.partials.editZone')
                     </div>
                     <div class="card-body">
-                        <h5>Title:</h5>
-                        <p>{{ $type->title }}</p>
+                        <h5>Name:</h5>
+                        <p>{{ $type->name }}</p>
                     </div>
                 </div>
             </div>
