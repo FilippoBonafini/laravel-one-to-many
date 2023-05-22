@@ -11,7 +11,7 @@
                 @endif
                 <div class="card">
                     <div class="card-header h4 d-flex align-items-center justify-content-between">
-                        {{ __('Types:') }}
+                        {{ __('Types of projects:') }}
                         <a href="{{ route('admin.types.create') }}">
                             @include ('partials.svg.add')
                         </a>

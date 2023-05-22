@@ -40,11 +40,13 @@
 
                         <h5 class="pt-3">Select</h5>
 
-                        <select name="name_id" class="form-select">
+                        <select name="type_id" class="form-select">
                             <option value="" selected>Select:</option>
-                            {{-- @foreach ($collection as $item)
-                                <option value="{{ $item->id }}"{{old('item_id') == $item->id ? 'selected' : ''}} >{{ $item->name }}</option>
-                            @endforeach --}}
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}" {{ old('type_id') == $type->id ? 'selected' : '' }}>
+                                    {{ $type->name }}
+                                </option>
+                            @endforeach
                         </select>
 
                         <h5 class="pt-3">Immagine:</h5>
